@@ -24,3 +24,6 @@ blabbermouth-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Visual Studio Code
+/.vscode
