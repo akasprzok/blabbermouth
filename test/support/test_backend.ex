@@ -19,6 +19,7 @@ defmodule Blabbermouth.TestBackend do
         {_level, _gl, {Logger, _msg, _ts, _md}} = event,
         %{callback_pid: pid} = state
       ) do
+    IO.inspect(event, label: "event")
     send(pid, event)
     {:ok, state}
   end

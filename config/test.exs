@@ -1,3 +1,3 @@
 import Config
 
-config :logger, :backends, [Blabbermouth.TestBackend]
+config :logger, :backends, []
