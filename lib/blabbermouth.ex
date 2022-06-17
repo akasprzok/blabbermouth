@@ -22,10 +22,10 @@ defmodule Blabbermouth do
   Represents Blabbermouth's internal state.
   """
   @type t :: %__MODULE__{
-    interval: interval(),
-    blabber: module(),
-    opts: Keyword.t()
-  }
+          interval: interval(),
+          blabber: module(),
+          opts: Keyword.t()
+        }
 
   @default_blabber Blabbermouth.Log
 

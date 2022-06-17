@@ -27,8 +27,10 @@ defmodule Blabbermouth.Gaggle do
   def init(blabbers) do
     children =
       blabbers
-      |> Enum.map(fn {blabber, interval, opts} -> {Blabbermouth, [blabber: blabber, interval: interval, opts: opts]} end)
+      |> Enum.map(fn {blabber, interval, opts} ->
+        {Blabbermouth, [blabber: blabber, interval: interval, opts: opts]}
+      end)
 
-      Supervisor.init(children, strategy: :one_for_one)
+    Supervisor.init(children, strategy: :one_for_one)
   end
 end
